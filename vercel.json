@@ -1,14 +1,29 @@
 
 {
-    "builds": [{
-        "src": "djangoprojectname/wsgi.py",
+    "version": 2,
+    "builds": [
+        {
+        "src": "PDF_VIEWER/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-    }],
+        },
+        {
+        "src":"build_files.sh",
+        "use": "@vercel/static-build",
+        "config": {
+            "distDir":"staticfiles_build"
+        }
+
+        }
+    ],
     "routes": [
         {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
             "src": "/(.*)",
-            "dest": "djangoprojectname/wsgi.py"
+            "dest": "PDF_VIEWER/wsgi.py"
         }
     ]
 }
