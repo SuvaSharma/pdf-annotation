@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-5ul%6t#5q*tu57_g1cliloyytq96ahgc+ik=tl!k#*olhvm$o9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -131,11 +131,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-# settings.py
-
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # Media files (user-uploaded files like PDFs)
 
 MEDIA_URL = '/media/'
