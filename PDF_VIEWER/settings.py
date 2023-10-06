@@ -131,10 +131,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+# settings.py
+
 STATIC_URL = '/static/'
-import os
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build')
+
 # Media files (user-uploaded files like PDFs)
 
 MEDIA_URL = '/media/'
