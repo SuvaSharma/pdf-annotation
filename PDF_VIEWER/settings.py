@@ -67,7 +67,7 @@ ROOT_URLCONF = 'pdfapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'F:\pdf_viewer\Templates\pdfapp'],
+        'DIRS': [r'F:\pdf_viewer\pdfapp\Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
