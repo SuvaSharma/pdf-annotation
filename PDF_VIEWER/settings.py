@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-5ul%6t#5q*tu57_g1cliloyytq96ahgc+ik=tl!k#*olhvm$o9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh',]
+ALLOWED_HOSTS = ['.vercel.app' , '.now.sh', '127.0.0.1' , 'localhost']
 
 
 # Application definition
@@ -67,7 +67,7 @@ ROOT_URLCONF = 'pdfapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'Templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,10 +131,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'staticfiles')
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# Media files (user-uploaded files like PDFs)
+
+
+STATIC_URL = 'static/'
+STATICFILES_DIRS = os.path.join(BASE_DIR ,'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build,' 'static')
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
