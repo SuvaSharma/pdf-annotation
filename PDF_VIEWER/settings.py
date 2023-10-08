@@ -30,7 +30,7 @@ SECRET_KEY = 'django-insecure-5ul%6t#5q*tu57_g1cliloyytq96ahgc+ik=tl!k#*olhvm$o9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app' , '.now.sh']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -67,7 +67,7 @@ ROOT_URLCONF = 'pdfapp.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [r'F:\pdf_viewer\pdfapp\Templates\pdfapp'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
