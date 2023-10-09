@@ -12,7 +12,7 @@ import io
 import json
 
 def home(request):
-    return render(request, 'home')
+    return render(request, 'home.html')
 
 # Login System
 class LoginView(ListView):
