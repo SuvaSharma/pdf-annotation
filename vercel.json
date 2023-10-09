@@ -3,7 +3,7 @@
     "version": 2,
     "builds": [
         {
-        "src": "PDF_VIEWER/wsgi.py",
+        "src": "pdf_viewer/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
         },
@@ -23,7 +23,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "PDF_VIEWER/wsgi.py"
+            "dest": "pdf_viewer/wsgi.py"
         }
     ]
 }
